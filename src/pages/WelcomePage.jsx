@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { IoSparkles } from "react-icons/io5";
-import "./WelcomePage.css";
+import "./welcomePage.css";
 import robotImage from "../assets/robot.png";
 
 export default function WelcomePage() {
