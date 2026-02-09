@@ -1,0 +1,161 @@
+.welcome-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  position: relative; /* عشان نقدر نحرك الكارد بحرية */
+}
+
+/* Robot Container */
+.robot-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.robot-image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+
+  position: relative;
+  z-index: 5; /* الصورة فوق الكارد */
+
+  animation: slideUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Animations */
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ======= التعديلات الأساسية هنا ======= */
+.welcome-card {
+  flex: 1;
+  max-width: 750px;
+
+  background-color: #fff;
+  border-radius: 28px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  position: relative;
+  z-index: 20;
+  left: -130px; /* الكارد تحت */
+
+  margin-top: 80px;
+
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+@keyframes fadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Text Box */
+.text-box {
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 6px;
+  color: #111;
+}
+
+.subtitle {
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Language Box */
+.lang-box {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.choose {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 18px;
+  margin: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+}
+
+.primary-btn {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.secondary-btn {
+  background-color: #ede9fe;
+  color: #7c3aed;
+}
+
+/* Hint */
+.hint {
+  margin-top: 18px;
+  text-align: center;
+  color: #e5e7eb;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .robot-image {
+    width: 180px;
+    height: 180px;
+    margin-left: 0;
+  }
+
+  .welcome-card {
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
