@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "start": "npm run build && npx serve -s dist -l tcp://0.0.0.0:$PORT"
+    "build": "vite build"
   },
   "dependencies": {
     "axios": "^1.13.5",
